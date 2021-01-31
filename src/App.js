@@ -13,7 +13,7 @@ const App = () => {
         <nav>
           <ul>
             <li>
-              <Link exact={true} to="/pokemon/home" className="nav-item">Pokemon List Card</Link>
+              <Link exact={true} to="/pokemon/" className="nav-item">Pokemon List Card</Link>
             </li>
             <li>
               <Link to="/pokemon/my" className="nav-item">My Pokemon Card</Link>
@@ -21,7 +21,7 @@ const App = () => {
           </ul>
         </nav><br/>
         <div className="content">
-          <Route exact={true} path="/pokemon/home" component={ListPokemon}/>          
+          <Route exact={true} path="/pokemon/" component={ListPokemon}/>          
           <Route path="/pokemon/my" component={MyPokemon}/>
           <Route path="/pokemon/detail/:pokemonName" component={DetailPokemon}/>          
         </div>
