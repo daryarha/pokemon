@@ -18,4 +18,4 @@ pokemonName is depends on what pokemon is clicked, e.g. charmander <br>
 trigger by clicking pokemon card in list pokemon page or my pokemon card page <br><br>
 
 API used here is https://github.com/mazipan/graphql-pokeapi which created based on https://pokeapi.co <br>
-Big thanks to the react, amp, mazipan, pokeapi, stackoverflow for helping creating this project.
+Big thanks to the react, amp, mazipan, pokeapi, sweetalert2, stackoverflow for the help to create this project.
