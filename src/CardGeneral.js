@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
   const CardGeneral = ({ header, name, image, description }) => {
     return (
         <div className="card">
-            <Link to={`/pokemon/${name}`}>
+            <Link to={`/pokemon/detail/${name}`}>
             <div className="card-header">
             {header}
             </div>
