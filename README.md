@@ -3,8 +3,8 @@
 This project was created to see the list pokemon, catch pokemon and release pokemon
 
 ## Available Link <br>
-home page or list pokemon page <br>
-https://dary.arha.github.io/pokemon/ <br>
+### home page or list pokemon page <br>
+#### https://dary.arha.github.io/pokemon/ <br>
 trigger by clicking the navigation bar "Pokemon List Card" <br>
 
 ### my pokemon card page <br>
