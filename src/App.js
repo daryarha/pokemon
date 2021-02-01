@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+import { BrowserRouter as Router, NavLink, Route } from 'react-router-dom';
 import React from 'react';
 import ListPokemon from "./ListPokemon";
 import DetailPokemon from "./DetailPokemon";
@@ -13,10 +13,10 @@ const App = () => {
         <nav>
           <ul>
             <li>
-              <Link exact={true} to="/pokemon/" className="nav-item">Pokemon List Card</Link>
+              <NavLink exact={true} to="/pokemon/" className="nav-item">Pokemon List Card</NavLink>
             </li>
             <li>
-              <Link to="/pokemon/my" className="nav-item">My Pokemon Card</Link>
+              <NavLink to="/pokemon/my" className="nav-item">My Pokemon Card</NavLink>
             </li>
           </ul>
         </nav><br/>

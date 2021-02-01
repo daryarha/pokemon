@@ -2,25 +2,8 @@ import React, { useState, useEffect } from 'react';
 import CardGeneral from './CardGeneral';
 import CapitalizeWord from './Capitalize.js';
 import Swal from 'sweetalert2';
-
-const gqlQuery = `query pokemons($limit: Int, $offset: Int) {
-    pokemons(limit: $limit, offset: $offset) {
-      count
-      next
-      previous
-      status
-      message
-      results {
-        id
-        url
-        name
-        image
-      }
-    }
-  }`;
-  
-  const gqlVariables = {};
-    
+import logo from './favicon2.ico';
+   
   
   const MyPokemon = () => {
     const [myPokemon, setMyPokemon] = useState(
@@ -33,7 +16,6 @@ const gqlQuery = `query pokemons($limit: Int, $offset: Int) {
     useEffect(() => {
         try {
           localStorage.setItem('myPokemon', JSON.stringify(myPokemon));
-          console.log(myPokemon);
         } catch (error) {
           console.log(error);
         }
@@ -61,8 +43,6 @@ const gqlQuery = `query pokemons($limit: Int, $offset: Int) {
       });
     }
 
-    console.log(myPokemon);
-
     if(!myPokemon.length){
         Swal.fire({
           title: 'You dont have any pokemon at the moment',
@@ -86,7 +66,7 @@ const gqlQuery = `query pokemons($limit: Int, $offset: Int) {
                 description={
                     <button className="btn-catch" onClick={() => releasePokemon(index, pokemon.name, pokemon.nickname)}>
                       Release 
-                      <amp-img class="img-pokeball" src="/favicon2.ico" alt="pokeball" height="15" width="15"></amp-img>
+                      <amp-img class="img-pokeball" src={logo} alt="pokeball" height="15" width="15"></amp-img>
                     </button>
                 }
                 name={pokemon.name}

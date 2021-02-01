@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import CapitalizeWord from './Capitalize.js';
 import Swal from 'sweetalert2';
+import logo from './favicon2.ico';
 
 const gqlQuery = `query pokemon($name: String!) {
     pokemon(name: $name) {
@@ -97,7 +98,7 @@ const gqlQuery = `query pokemon($name: String!) {
             if (!value) {
               resolve('You need to give a name!')
             } else {              
-              dataMyPokemon.map(dt => {
+              dataMyPokemon.forEach(dt => {
                 if(dt.nickname===value && dt.id===id){                  
                   resolve('Name already exist! <br/> Give another name')
                 }
@@ -175,7 +176,7 @@ const gqlQuery = `query pokemon($name: String!) {
               </div>
               <button className="btn-catch" onClick={catchPokemon}>
                 Catch Pokemon 
-                <amp-img height="28" width="28" class="img-pokeball" src="/favicon2.ico" alt="pokeball"></amp-img>
+                <amp-img height="28" width="28" class="img-pokeball" src={logo} alt="pokeball"></amp-img>
               </button>
             </div>
         </div>
